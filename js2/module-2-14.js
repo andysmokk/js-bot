@@ -1,16 +1,10 @@
-function isValidPassword(password) {
-  const SAVED_PASSWORD = 'jqueryismyjam';
-  // Change code below this line
-    
-    const isMatch = password === SAVED_PASSWORD;
+const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
 
+// Change code below this line
+const firstTwoEls = fruits.slice(0, 2);
+const nonExtremeEls = fruits.slice(1, 4);
+const lastThreeEls = fruits.slice(-3);
 
-    console.log(isMatch)
-  // Change code above this line
-  
-  return isMatch;
-}
-
-isValidPassword('jqueryismyjam')
-isValidPassword("kiwirul3z")
-isValidPassword("mangodab3st")
+console.log(firstTwoEls);
+console.log(nonExtremeEls);
+console.log(lastThreeEls);

@@ -1,21 +1,6 @@
-function checkPassword(password) {
-  const ADMIN_PASSWORD = 'jqueryismyjam';
-  let message;
+const fruits = ['apple', 'plum', 'pear', 'orange'];
 
-  if (password === null) { // Change this line
-    message =  'Canceled by user!';
-  } else if (password === ADMIN_PASSWORD) { // Change this line
-    message = 'Welcome!';
-  } else {
-    message = 'Access denied, wrong password!';
-    }
-    
-    console.log(message)
-
-  return message;
+for (let i = 0; i < fruits.length; i += 1) { // Change this line
+  const fruit = fruits[i]; // Change this line
+  console.log(fruit);
 }
-
-checkPassword("mangohackzor")
-checkPassword(null)
-checkPassword("polyhax")
-checkPassword("jqueryismyjam")

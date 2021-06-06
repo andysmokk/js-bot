@@ -1,41 +1,21 @@
-function getShippingCost(country) {
-  let message;
-  // Change code below this line
-  
-    switch (country) {
-        case 'China':
-            delivery = 100;
-            message = `Shipping to ${country} will cost ${delivery} credits`;
-            break;
-      
-        case 'Chile':
-            delivery = 250;
-            message = `Shipping to ${country} will cost ${delivery} credits`;
-            break;
-        
-        case 'Australia':
-            delivery = 170;
-            message = `Shipping to ${country} will cost ${delivery} credits`;
-            break;
-        
-        case 'Jamaica':
-            delivery = 120;
-            message = `Shipping to ${country} will cost ${delivery} credits`;
-            break;
-      
-        default:
-            message = "Sorry, there is no delivery to your country";
+function getEvenNumbers(start, end) {
+   // Change code below this line
+    
+    let newArray = [];
+
+    for (let i = start; i <= end; i += 1) {
+        if (i % 2 === 0) {
+            newArray.push(i)
+        }
     }
 
-    console.log(message)
-      
-  // Change code above this line
-  return message;
-}
+    return newArray;
 
-getShippingCost("Australia");
-getShippingCost("Germany");
-getShippingCost("China");
-getShippingCost("Chile");
-getShippingCost("Jamaica");
-getShippingCost("Sweden");
+    // Change code above this line
+}
+  
+console.log(getEvenNumbers(2, 5));
+console.log(getEvenNumbers(3, 11));
+console.log(getEvenNumbers(6, 12));
+console.log(getEvenNumbers(8, 8));
+console.log(getEvenNumbers(7, 7));

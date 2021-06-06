@@ -1,20 +1,18 @@
-function checkStorage(available, ordered) {
-  let message;
-  // Change code below this line
+function makeArray(firstArray, secondArray, maxLength) {
+    // Change code below this line
 
-  if (ordered >= available) {
-    message = 'Not enough goods in stock!';
-  } else {
-    message = 'Order is processed, our manager will contact you.';
-  }
-  
-    console.log(message)
-  // Change code above this line
-  return message;
+  const newArray = firstArray.concat(secondArray).slice(0, maxLength);
+
+  console.log(newArray);
+
+  return newArray;
+
+    // Change code above this line
 }
-
-checkStorage(100, 50)
-checkStorage(100, 130)
-checkStorage(200, 20)
-checkStorage(200, 150)
-checkStorage(150, 180)
+  
+makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+makeArray(["Mango", "Poly", "Houston"], ["Ajax", "Chelsea"], 4);
+makeArray(["Mango"], ["Ajax", "Chelsea", "Poly", "Houston"], 3);
+makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2);
+makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 4);
+makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus", "Venus"], 0);

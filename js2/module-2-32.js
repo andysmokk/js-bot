@@ -1,12 +1,19 @@
-function getSubstring(string, length) {
-  const substring = string.slice(string, length); // Change this line
+function includes(array, value) {
+  // Change code below this line
 
-    console.log(substring)
-  return substring;
+  for (let element of array) {
+    if (element === value) {
+      return true;
+    }
+  }
+
+  return false;
+  // Change code above this line
 }
 
-getSubstring("Hello world", 3);
-getSubstring("Hello world", 6);
-getSubstring("Hello world", 8);
-getSubstring("Hello world", 11);
-getSubstring("Hello world", 0);
+console.log(includes([1, 2, 3, 4, 5], 3));
+console.log(includes([1, 2, 3, 4, 5], 17));
+console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter"));
+console.log(includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Uranus"));
+console.log(includes(["apple", "plum", "pear", "orange"], "plum"));
+console.log(includes(["apple", "plum", "pear", "orange"], "kiwi"));

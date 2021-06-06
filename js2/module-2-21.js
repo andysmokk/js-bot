@@ -1,12 +1,21 @@
-function isNumberInRange(start, end, number) {
-    const isInRange = number >= start && number <= end; // Change this line
-    
-    console.log(isInRange);
+function findLongestWord(string) {
+  // Change code below this line
 
-  return isInRange;
+  let array = string.split(' ');
+  let longestWord = ' ';
+  
+  for (let i = 0; i < array.length; i += 1) {
+    if (array[i].length >= longestWord.length) {
+    longestWord = array[i];
+    }
+    
+  }
+
+  return longestWord;
+
+  // Change code above this line
 }
 
-isNumberInRange(10, 30, 17);
-isNumberInRange(10, 30, 5);
-isNumberInRange(20, 50, 24);
-isNumberInRange(20, 50, 76);
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+console.log(findLongestWord("Google do a roll"));
+console.log(findLongestWord("May the force be with you"));

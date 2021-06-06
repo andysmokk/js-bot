@@ -1,24 +1,16 @@
-function checkStorage(available, ordered) {
-  let message;
+function calculateTotalPrice(order) {
+  let total = 0;
   // Change code below this line
   
-  if (ordered === 0) {
-    message = "There are no products in the order!"
-  } else if (ordered > available) {
-    message = "Your order is too large, there are not enough items in stock!"
-  } else {
-    message = "The order is accepted, our manager will contact you"
-    }
-    
-    console.log(message)
+  for (const parameter of order) {
+  total += parameter;
+  }
 
   // Change code above this line
-  return message;
+  return total;
 }
 
-checkStorage(100, 50)
-checkStorage(100, 130)
-checkStorage(70, 0)
-checkStorage(200, 20)
-checkStorage(200, 250)
-checkStorage(150, 0)
+console.log(calculateTotalPrice([12, 85, 37, 4]));
+console.log(calculateTotalPrice([164, 48, 291]));
+console.log(calculateTotalPrice([412, 371, 94, 63, 176]));
+console.log(calculateTotalPrice([2, 2]));

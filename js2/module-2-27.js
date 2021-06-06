@@ -1,27 +1,28 @@
-function getSubscriptionPrice(type) {
-  let price;
+function filterArray(numbers, value) {
   // Change code below this line
+  const filteredNumbers = [];
 
- switch (type) { // Change this line
-    case 'professional': // Change this line
-      price = 20; // Change this line
-      break;
+  // for (let i = 0; i < numbers.length; i += 1) {
+  //   const number = numbers[i];
 
-    case 'organization': // Change this line
-      price = 50; // Change this line
-      break;
+  //   if (number > value) {
+  //     filteredNumbers.push(number);
+  //   }
+  // }
 
-    case 'starter': // Change this line
-      price = 0; // Change this line
-      break;
+  for (const number of numbers) {
+    if (number > value) {
+      filteredNumbers.push(number);
     }
+  }
 
-    console.log(price)
+  return filteredNumbers;
 
   // Change code above this line
-  return price;
 }
 
-getSubscriptionPrice("professional");
-getSubscriptionPrice("organization");
-getSubscriptionPrice("starter");
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+console.log(filterArray([1, 2, 3, 4, 5], 4));
+console.log(filterArray([1, 2, 3, 4, 5], 5));
+console.log(filterArray([12, 24, 8, 41, 76], 38));
+console.log(filterArray([12, 24, 8, 41, 76], 20));

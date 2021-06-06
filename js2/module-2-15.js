@@ -1,17 +1,6 @@
-function checkAge(age) {
-  let message;
+const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+const newClients = ['Peach', 'Houston'];
 
-  if (age >= 18) { // Change this line
-    message = 'You are an adult';
-  } else {
-    message = 'You are a minor';
-    }
+const allClients = oldClients.concat(newClients); // Change this line
 
-    console.log(message)
-  return message;
-}
-
-checkAge(5)
-checkAge(18)
-checkAge(35)
-checkAge(17)
+console.log(allClients);

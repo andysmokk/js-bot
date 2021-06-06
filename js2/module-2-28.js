@@ -1,35 +1,12 @@
-function checkPassword(password) {
-  const ADMIN_PASSWORD = "jqueryismyjam";
-  let message;
-  // Change code below this line
-  
-  switch (password) {
-    case null:
-      message = "Canceled by user!";
-      break;
-      
-    case ADMIN_PASSWORD:
-      message = "Welcome!";
-          break;
-      
-    default:
-      message = "Access denied, wrong password!";
-  }
+// Change code below this line
+const a = 3 % 3;
+const b = 4 % 3;
+const c = 11 % 4;
+const d = 12 % 7;
+const e = 8 % 3;
 
-//   if (password === null) {
-//     message = "Canceled by user!";
-//   } else if (password === ADMIN_PASSWORD) {
-//     message = "Welcome!";
-//   } else {
-//     message = "Access denied, wrong password!";
-//   }
-    console.log(message)
-
-  // Change code above this line
-  return message;
-}
-
-checkPassword("mangohackzor");
-checkPassword(null);
-checkPassword("polyhax");
-checkPassword("jqueryismyjam");
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+console.log(e);
