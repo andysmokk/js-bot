@@ -1,18 +1,20 @@
 function getExtremeElements(array) {
   // Change code below this line
+  
+  // array.splice(1, array.length - 2);
+  // return array
 
-  const deleteElements = array.splice(1, array.length - 2);
+  const firstElem = array.shift();
+  const lastElem = array.pop();
+  
+  console.log(firstElem)
+  console.log(lastElem)
+  
+  const newArray = [firstElem, lastElem];
 
-  console.log(array)
-
-  return array;
+  return newArray
 
   // Change code above this line
 }
 
-getExtremeElements([1, 2, 3, 4, 5]);
-getExtremeElements(["Earth", "Mars", "Venus"]);
-getExtremeElements(["apple", "peach", "pear", "banana"]);
-
-
-
+console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));

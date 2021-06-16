@@ -1,11 +1,9 @@
 function calculateEngravingPrice(message, pricePerWord) {
    // Change code below this line
+ 
+   const pricePerFrase = message.split('').length * pricePerWord;
   
-  const engravingPrice = message.split(" ").length * pricePerWord;
-  
-  console.log('result', engravingPrice)
-
-  return engravingPrice;
+   return pricePerFrase;
 
    // Change code above this line
 }
