@@ -6,44 +6,48 @@ const atTheOldToad = {
   ],
   // Change code below this line
   getPotions() {
-    const { potions } = atTheOldToad;
-    return potions;
+    return this.potions;
   },
 
   addPotion(potionName) {
-    const { potions } = atTheOldToad;
-    if (potions.includes(potionName)) {
-      return `Potion ${potionName} is already equipped!`;
+
+    for (let obj in this.potions) {
+      
+
+      if (obj.includes(potionName.name)) {
+        return `Potion ${potionName} is already equipped!`;
+      }
     }
-    potions.push(potionName);
-    return potions;
+    this.potions.push(potionName);
+    return this.potions;
   },
   
   removePotion(potionName) {
-    const { potions } = atTheOldToad;
-    for (let potion of potions) {
-    if (potion.name === potionName) {
-    let potionIndex = potions.indexOf(potion); 
-     potions.splice(potionIndex, 1);
+    for (let potion of this.potions) {
+      if (potion.name === potionName) {
+        const potionIndex = this.potions.indexOf(potion);
+        this.potions.splice(potionIndex, 1);
+        return this.potions;
       }
     }
-    return potions;
+    return `Potion ${potionName} is not in inventory!`;
   },
   
   updatePotionName(oldName, newName) {
-    const { potions } = atTheOldToad;
-    for (let potion of potions) {
-    if (potion.name === oldName) {
-      potion.name = newName
+    for (let potion of this.potions) {
+      if (potion.name === oldName) {
+        potion.name = newName;
+        return this.potions;
       }
     }
-    return potions;
+    return `Potion ${oldName} is not in inventory!`;
   },
   // Change code above this line
 };
 
 // console.log(atTheOldToad.getPotions());
-console.log(atTheOldToad.addPotion({ name: 'Dragon breath', price: 780 }));
+console.log(atTheOldToad.addPotion({ name: 'Stone skin', price: 520 }));
+// console.log(atTheOldToad.addPotion({ name: "Invisibility", price: 620 }));
 // console.log(atTheOldToad.addPotion({ name: "Power potion", price: 270 }));
 // console.log(atTheOldToad.removePotion("Dragon breath"));
 // console.log(atTheOldToad.removePotion("Speed potion"));
