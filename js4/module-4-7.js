@@ -14,7 +14,7 @@ const messages = [];
 for (let i = 0; i < orders.length; i += 1) {
   let result = composeMessage.call(orders[i], i + 1);
   
-  console.log(composeMessage.call(orders[i], i + 1))
+  // console.log(composeMessage.call(orders[i], i + 1))
     messages.push(result);
 }
 
