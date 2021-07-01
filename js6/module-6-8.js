@@ -7,6 +7,8 @@ const getCommonElements = (firstArray, secondArray) => {
             commonElements.push(element);
         }
     });
+
+    // firstArray.forEach(element => secondArray.includes(element) ? commonElements.push(element) : commonElements);
   
     // Пиши код выше этой строки
     return commonElements;

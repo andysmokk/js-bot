@@ -7,6 +7,8 @@ const filterArray = (numbers, value) => {
             filteredNumbers.push(number);
         }
     });
+
+    // numbers.forEach(number => number > value ? filteredNumbers.push(number) : filteredNumbers);
   
     // Пиши код выше этой строки
     return filteredNumbers;

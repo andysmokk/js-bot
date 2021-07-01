@@ -65,11 +65,13 @@ const users = [
 ];
 
 // Пиши код ниже этой строки
-const getNamesSortedByFriendCount = users => {
-    return [...users]
+const getNamesSortedByFriendCount = users =>
+    [...users]
+        
+        // console.log(...users)
         .sort((oneFriend, twoFriend) => oneFriend.friends.length - twoFriend.friends.length)
-        .map(user => user.name);
-};
+        .map(user => user.name)
+        // .filter((user, index, array) => array.indexOf(user) === index);
 // Пиши код выше этой строки
 
 console.log(getNamesSortedByFriendCount(users));

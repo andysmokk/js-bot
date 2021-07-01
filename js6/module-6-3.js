@@ -7,6 +7,8 @@ function getCommonElements(firstArray, secondArray) {
             commonElements.push(element);
         }
     });
+
+    // firstArray.forEach(el => secondArray.includes(el) ? commonElements.push(el) : commonElements);
   
     return commonElements;
     // Пиши код выше этой строки

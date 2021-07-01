@@ -2,11 +2,13 @@ function filterArray(numbers, value) {
     const filteredNumbers = [];
     // Пиши код ниже этой строки
   
-  numbers.forEach(function(number) {
-    if (number > value) {
-      filteredNumbers.push(number);
-      }
-  });
+  // numbers.forEach(function(number) {
+  //   if (number > value) {
+  //     filteredNumbers.push(number);
+  //     }
+  // });
+
+  numbers.forEach(number => number > value ? filteredNumbers.push(number) : filteredNumbers);
   
     // Пиши код выше этой строки
     return filteredNumbers;

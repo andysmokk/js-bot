@@ -72,11 +72,18 @@ const users = [
     }
 ];
 
+// const getFriends = (users) => {
+//   const allFriends = users.flatMap(user => user.friends);    
+//   const uniqueFriends = allFriends.filter((friend, idx, friends) => friends.indexOf(friend) === idx);
+//   return uniqueFriends;
+// };
+
 const getFriends = (users) => {
-  const allFriends = users.flatMap(user => user.friends);
-  const uniqueFriends = allFriends.filter((friend, idx, friends) => friends.indexOf(friend) === idx);
-  return uniqueFriends;
+    return [...users]
+        .flatMap(user => user.friends)
+        .filter((friend, idx, friends) => friends.indexOf(friend) === idx);
 };
+
 // Пиши код выше этой строки
 
 console.log(getFriends(users));

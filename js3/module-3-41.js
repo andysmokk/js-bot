@@ -4,40 +4,42 @@ const atTheOldToad = {
     { name: 'Dragon breath', price: 780 },
     { name: 'Stone skin', price: 520 },
   ],
+  
   // Change code below this line
   getPotions() {
-    return this.potions;
+    const { potions } = atTheOldToad;
+    return potions;
   },
-
+  
   addPotion(potionName) {
-
-    for (let obj in this.potions) {
-      
-
-      if (obj.includes(potionName.name)) {
-        return `Potion ${potionName} is already equipped!`;
+    const { potions } = atTheOldToad;
+    for (let potion of potions) {
+      if (potion.name === potionName.name) {
+        return `Potion ${potionName.name} is already equipped!`;
       }
     }
-    this.potions.push(potionName);
-    return this.potions;
+    potions.push(potionName);
+    return potions;
   },
   
   removePotion(potionName) {
-    for (let potion of this.potions) {
+    const { potions } = atTheOldToad;
+    for (let potion of potions) {
       if (potion.name === potionName) {
-        const potionIndex = this.potions.indexOf(potion);
-        this.potions.splice(potionIndex, 1);
-        return this.potions;
+        const potionIndex = potions.indexOf(potion);
+        potions.splice(potionIndex, 1);
+        return potions;
       }
     }
     return `Potion ${potionName} is not in inventory!`;
   },
   
   updatePotionName(oldName, newName) {
-    for (let potion of this.potions) {
+    const { potions } = atTheOldToad;
+    for (let potion of potions) {
       if (potion.name === oldName) {
-        potion.name = newName;
-        return this.potions;
+        potion.name = newName
+        return potions;
       }
     }
     return `Potion ${oldName} is not in inventory!`;

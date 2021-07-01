@@ -9,7 +9,10 @@ function changeEven(numbers, value) {
         } else if (element % 2 !== 0) {
           newArr.push(element);
         }
-    });
+  });
+  
+// numbers.forEach(number => number % 2 === 0 ? newArray.push(number + value) : newArray.push(number));
+
     return newArr;
     // Пиши код выше этой строки
   }
