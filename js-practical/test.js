@@ -104,7 +104,7 @@ const findYearBirth = (name, surname, array) => {
 
 const findCenturyWork = (startCentury, endCentury, scientists) => {
   const result = scientists.filter(scientist => scientist.born >= startCentury && scientist.born < endCentury && scientist.dead > startCentury);
-
+// scientists.every =>>> true/falls
   return result.map(scientist => `${scientist.name} ${scientist.surname}`);
 };
 
