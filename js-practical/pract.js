@@ -181,8 +181,35 @@
 
 // console.log(count("abbbaacccabbacccaabbb"));
 
-const filterList = l => {
-return l.filter(el => Number.isInteger(el))
+// const filterList = l => {
+// return l.filter(el => Number.isInteger(el))
+// };
+
+// console.log(filterList([42, '145', 'ada', 5, '555', 99]));
+
+// // Функция checkPassword(password) получает пароль пользователя
+// в параметр password, проверяет его на совпадение с паролем
+// администратора в переменной ADMIN_PASSWORD и возвращает сообщение
+// о результате сравнения, хранящееся в переменной message.
+
+// // Если значение параметра password равно null, значит пользователь
+// отменил операцию и в message записывается строка "Canceled by user!".
+// // Если значение параметра password совпадает со значением ADMIN_PASSWORD,
+// в переменную message присваивается строка "Welcome!".
+// // Если ни одно из предыдущих условий не выполнилось,
+// в переменную message записывается строка "Access denied, wrong password!".
+
+function checkPassword(password) {
+    const ADMIN_PASSWORD = 'jqueryismyjam';
+    let message = '';
+    if (password === ADMIN_PASSWORD) {
+        message = "Welcome!";
+    } else if (password === null) {
+        message = "Canceled by user!";
+    } else message = "Access denied, wrong password!";
+    return message;
 };
 
-console.log(filterList([42, '145', 'ada', 5, '555', 99]));
+console.log(checkPassword("mangohackzor"));
+console.log(checkPassword(null));
+console.log(checkPassword("jqueryismyjam"));
