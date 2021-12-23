@@ -1,3 +1,5 @@
+console.log('¿Hola Mundo?');
+
 // const elements = [
 //   'Картошка',
 //   'Грибы',
